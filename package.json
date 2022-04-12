@@ -1,6 +1,6 @@
 {
   "name": "@zeniai/intuit-oauth",
-  "version": "4.0.32",
+  "version": "4.0.34",
   "description": "Intuit Node.js client for OAuth2.0 and OpenIDConnect",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
