@@ -2,8 +2,8 @@
   "name": "@zeniai/intuit-oauth",
   "version": "4.0.17",
   "description": "Intuit Node.js client for OAuth2.0 and OpenIDConnect",
-  "main": "./lib/OAuthClient.js",
-  "types": "./lib/OAuthClient.d.ts",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "start": "node index.js",
     "build": "tsc",

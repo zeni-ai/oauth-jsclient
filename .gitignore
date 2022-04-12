@@ -9,8 +9,6 @@ coverage
 bower_components
 npm-debug.*
 node_modules
-index.js
-src/index.js
 sample/node_modules
 sample/.env
 oauth-jsclient.iml
@@ -18,3 +16,4 @@ package-lock.json
 yarn.lock
 src/logs/*
 dist
+lib
