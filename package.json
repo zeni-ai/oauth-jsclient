@@ -6,7 +6,6 @@
   "types": "./src/index.d.ts",
   "scripts": {
     "start": "node index.js",
-    "build": "browserify ./src/OAuthClient.js -o ./dist/OAuthClient.js",
     "karma": "karma start karma.conf.js",
     "test": "nyc mocha",
     "snyk": "snyk test",
@@ -70,7 +69,6 @@
   "homepage": "https://github.com/intuit/oauth-jsclient",
   "dependencies": {
     "atob": "2.1.2",
-    "crypto": "^1.0.1",
     "csrf": "^3.0.4",
     "jsonwebtoken": "^8.3.0",
     "popsicle": "10.0.1",
@@ -79,7 +77,6 @@
     "winston": "^3.1.0"
   },
   "devDependencies": {
-    "browserify": "^17.0.0",
     "btoa": "^1.2.1",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
