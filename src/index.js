@@ -25,7 +25,7 @@ import crypto from 'crypto-browserify';
 import atob  from 'atob';
 import Csrf  from '@zeniai/csrf';
 import queryString from 'query-string';
-import popsicle from 'popsicle';
+import popsicle from 'popsicle/dist/browser';
 import os  from 'os';
 import winston from 'winston';
 import path  from 'path';
