@@ -21,7 +21,7 @@
 /**
  * @namespace OAuthClient
  */
-import crypto from 'crypto';
+import crypto from 'crypto-browserify';
 import atob  from 'atob';
 import Csrf  from 'csrf';
 import queryString from 'query-string';
