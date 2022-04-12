@@ -23,7 +23,7 @@
  */
 import crypto from 'crypto-browserify';
 import atob  from 'atob';
-import Csrf  from 'csrf';
+import Csrf  from '@zeniai/csrf';
 import queryString from 'query-string';
 import popsicle from 'popsicle';
 import os  from 'os';

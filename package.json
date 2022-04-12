@@ -1,6 +1,6 @@
 {
   "name": "@zeniai/intuit-oauth",
-  "version": "4.0.26",
+  "version": "4.0.27",
   "description": "Intuit Node.js client for OAuth2.0 and OpenIDConnect",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -36,10 +36,9 @@
   ],
   "homepage": "https://github.com/intuit/oauth-jsclient",
   "dependencies": {
+    "@zeniai/csrf": "^3.1.3",
     "atob": "2.1.2",
-    "crypto": "^1.0.1",
     "crypto-browserify": "^3.12.0",
-    "csrf": "^3.0.4",
     "jsonwebtoken": "^8.3.0",
     "os": "^0.1.2",
     "popsicle": "10.0.1",
