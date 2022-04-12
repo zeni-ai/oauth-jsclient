@@ -1,6 +1,6 @@
 {
   "name": "@zeniai/intuit-oauth",
-  "version": "4.0.34",
+  "version": "4.0.35",
   "description": "Intuit Node.js client for OAuth2.0 and OpenIDConnect",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -41,8 +41,7 @@
     "os": "^0.1.2",
     "popsicle": "10.0.1",
     "query-string": "^7.1.1",
-    "rsa-pem-from-mod-exp": "^0.8.4",
-    "winston": "^3.1.0"
+    "rsa-pem-from-mod-exp": "^0.8.4"
   },
   "devDependencies": {
     "btoa": "^1.2.1",
