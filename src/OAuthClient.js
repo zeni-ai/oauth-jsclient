@@ -24,6 +24,7 @@
 
 'use strict';
 
+const crypto = require('crypto');
 const atob = require('atob');
 const Csrf = require('csrf');
 const queryString = require('query-string');
@@ -36,6 +37,9 @@ const jwt = require('jsonwebtoken');
 const AuthResponse = require('./response/AuthResponse');
 const version = require('../package.json');
 const Token = require('./access-token/Token');
+
+const someCryptoUsage = crypto.randomBytes(19);
+console.log("Some crypto usage" + someCryptoUsage);
 
 /**
  * @constructor
