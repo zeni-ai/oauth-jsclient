@@ -25,7 +25,7 @@
 'use strict';
 
 const atob = require('atob');
-const Csrf = require('csrf');
+const Csrf = require('@zeniai/csrf');
 const queryString = require('query-string');
 const popsicle = require('popsicle/dist/browser');
 const os = require('os');
