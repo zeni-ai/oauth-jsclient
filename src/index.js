@@ -27,9 +27,6 @@ import Csrf  from '@zeniai/csrf';
 import queryString from 'query-string';
 import popsicle from 'popsicle/dist/browser';
 import os  from 'os';
-import winston from 'winston';
-import path  from 'path';
-import fs  from 'fs';
 import jwt  from 'jsonwebtoken';
 import AuthResponse  from './response/AuthResponse';
 import version  from '../package.json';
@@ -52,30 +49,9 @@ function OAuthClient(config) {
   this.clientSecret = config.clientSecret;
   this.redirectUri = config.redirectUri;
   this.token = new Token(config.token);
-  this.logging = !!(
-    Object.prototype.hasOwnProperty.call(config, 'logging') && config.logging === true
-  );
+  this.logging = false;
   this.logger = null;
   this.state = new Csrf();
-
-  if (this.logging) {
-    const dir = './logs';
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir);
-    }
-    this.logger = winston.createLogger({
-      level: 'info',
-      format: winston.format.combine(
-        winston.format.timestamp(),
-        winston.format.printf((info) => `${info.timestamp} ${info.level}: ${info.message}`),
-      ),
-      transports: [
-        new winston.transports.File({
-          filename: path.join(dir, 'oAuthClient-log.log'),
-        }),
-      ],
-    });
-  }
 }
 
 OAuthClient.cacheId = 'cacheID';
@@ -108,7 +84,7 @@ OAuthClient.scopes = {
 };
 OAuthClient.user_agent = `Intuit-OAuthClient-JS_${
   version.version
-}_${os.type()}_${os.release()}_${os.platform()}`;
+}_${os.type()}_${os.release()}`;
 
 OAuthClient.prototype.setAuthorizeURLs = function setAuthorizeURLs(params) {
   // check if the customURL's are passed correctly
