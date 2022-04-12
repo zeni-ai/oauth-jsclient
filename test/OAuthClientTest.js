@@ -12,7 +12,7 @@ const jwt = require('jsonwebtoken');
 const getPem = require('rsa-pem-from-mod-exp');
 
 const AuthResponse = require('../src/response/AuthResponse');
-const OAuthClientTest = require('../src/OAuthClient');
+const OAuthClientTest = require('../src');
 // var AuthResponse = require('../src/response/AuthResponse');
 const expectedAccessToken = require('./mocks/bearer-token.json');
 const expectedTokenResponse = require('./mocks/tokenResponse.json');

@@ -10,7 +10,7 @@ const {
 const { expect } = require('chai');
 const sinon = require('sinon');
 
-const OAuthClientTest = require('../src/OAuthClient');
+const OAuthClientTest = require('../src');
 const AuthResponse = require('../src/response/AuthResponse');
 const expectedAccessToken = require('./mocks/bearer-token.json');
 const expectedResponseMock = require('./mocks/response.json');

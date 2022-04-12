@@ -5,7 +5,7 @@
 const { describe, it } = require('mocha');
 const { expect } = require('chai');
 
-const OAuthClientTest = require('../src/OAuthClient');
+const OAuthClientTest = require('../src');
 const expectedAccessToken = require('./mocks/bearer-token.json');
 
 
