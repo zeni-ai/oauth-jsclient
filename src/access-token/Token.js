@@ -17,12 +17,6 @@
  */
 
 /**
- * @namespace Token
- */
-
-'use strict';
-
-/**
  * @param {Cache} options.cache
  * @param {string} options.cacheId
  * @constructor
@@ -149,4 +143,4 @@ Token.prototype.isRefreshTokenValid = function isRefreshTokenValid() {
   return this._checkExpiry(this.x_refresh_token_expires_in);
 };
 
-module.exports = Token;
+export default Token;

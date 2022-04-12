@@ -17,12 +17,6 @@
  */
 
 /**
- * @namespace AuthResponse
- */
-
-'use strict';
-
-/**
  * AuthResponse
  * @property {Token} token
  * @property {Response} response
@@ -153,4 +147,4 @@ AuthResponse._jsonContentType = 'application/json';
 AuthResponse._urlencodedContentType = 'application/x-www-form-urlencoded';
 
 
-module.exports = AuthResponse;
+export default AuthResponse;

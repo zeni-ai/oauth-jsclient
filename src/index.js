@@ -21,22 +21,20 @@
 /**
  * @namespace OAuthClient
  */
-
-'use strict';
-
-const crypto = require('crypto');
-const atob = require('atob');
-const Csrf = require('csrf');
-const queryString = require('query-string');
-const popsicle = require('popsicle');
-const os = require('os');
-const winston = require('winston');
-const path = require('path');
-const fs = require('fs');
-const jwt = require('jsonwebtoken');
-const AuthResponse = require('./response/AuthResponse');
-const version = require('../package.json');
-const Token = require('./access-token/Token');
+import crypto from 'crypto';
+import atob  from 'atob';
+import Csrf  from 'csrf';
+import queryString from 'query-string';
+import popsicle from 'popsicle';
+import os  from 'os';
+import winston from 'winston';
+import path  from 'path';
+import fs  from 'fs';
+import jwt  from 'jsonwebtoken';
+import AuthResponse  from './response/AuthResponse';
+import version  from '../package.json';
+import Token  from './access-token/Token';
+import getPem from 'rsa-pem-from-mod-exp';
 
 const someCryptoUsage = crypto.randomBytes(19);
 console.log("Some crypto usage" + someCryptoUsage);
@@ -507,7 +505,6 @@ OAuthClient.prototype.getKeyFromJWKsURI = function getKeyFromJWKsURI(id_token, k
  */
 OAuthClient.prototype.getPublicKey = function getPublicKey(modulus, exponent) {
   // eslint-disable-next-line global-require
-  const getPem = require('rsa-pem-from-mod-exp');
   const pem = getPem(modulus, exponent);
   return pem;
 };
@@ -650,4 +647,4 @@ OAuthClient.prototype.log = function log(level, message, messageData) {
   }
 };
 
-module.exports = OAuthClient;
+export default OAuthClient;
