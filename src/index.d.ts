@@ -1,4 +1,4 @@
-import csrf from '@zeniai/csrf';
+import csrf from 'csrf';
 
 declare class AuthResponse {
     constructor(params: AuthResponse.AuthResponseParams);
