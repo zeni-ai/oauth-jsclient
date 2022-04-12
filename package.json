@@ -1,6 +1,6 @@
 {
   "name": "@zeniai/intuit-oauth",
-  "version": "4.0.29",
+  "version": "4.0.32",
   "description": "Intuit Node.js client for OAuth2.0 and OpenIDConnect",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -17,9 +17,7 @@
     "test-watch": "mocha --watch --reporter=spec",
     "test-debug": "mocha --inspect-brk --watch test",
     "show-coverage": "npm test; open -a 'Google Chrome' coverage/index.html",
-    "clean-install": "rm -rf node_modules && npm install",
-    "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "clean-install": "rm -rf node_modules && npm install"
   },
   "files": [
     "lib/**/*"
